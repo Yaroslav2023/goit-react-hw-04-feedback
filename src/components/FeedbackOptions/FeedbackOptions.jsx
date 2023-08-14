@@ -1,27 +1,23 @@
 import cl from './feedbackOptions.module.css';
-import React from 'react';
-import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { Context } from '../../context/stateContext';
 
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+const FeedbackOptions = () => {
+  const { handleGood, handleNeutral, handleBad } = useContext(Context);
+
   return (
     <div className={cl.buttonsWrap}>
-      {options.map(option => (
-        <button
-          className={cl.btn}
-          key={option}
-          type="button"
-          onClick={() => onLeaveFeedback(option)}
-        >
-          {option}
-        </button>
-      ))}
+      <button className={cl.btn} type="button" onClick={handleGood}>
+        Good
+      </button>
+      <button className={cl.btn} type="button" onClick={handleNeutral}>
+        Neutral
+      </button>
+      <button className={cl.btn} type="button" onClick={handleBad}>
+        Bad
+      </button>
     </div>
   );
-};
-
-FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;
