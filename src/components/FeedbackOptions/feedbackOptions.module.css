@@ -1,0 +1,15 @@
+.buttonsWrap {
+
+    width: 300px;
+    display: flex;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 5px 10px;
+
+}

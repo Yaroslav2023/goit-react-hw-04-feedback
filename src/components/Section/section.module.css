@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.section {
+    width: 500px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: ghostwhite;
+}
+
+.title {
+    text-align: center;
+}
