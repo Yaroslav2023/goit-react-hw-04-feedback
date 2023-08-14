@@ -6,7 +6,7 @@ import Notification from '../Notification';
 import { Context } from 'context/stateContext';
 
 const Section = () => {
-  const [title, setTitle] = useState('Please leave feedback');
+  const [title] = useState('Please leave feedback');
   const { totalFeedback } = useContext(Context);
 
   return (
